@@ -1,0 +1,128 @@
+<!-- HTML 한번에 끝내기 -->
+<!-- 이수안컴퓨터연구소 -->
+<!-- https://www.youtube.com/watch?v=VozMYcCYvtg&list=PL7ZVZgsnLwEHAehyS4ult4cgRpa7Ll_eU&index=2 -->
+<!-- https://suanlab.notion.site/HTML-256b041d35654311849f1c348e19219d -->
+
+
+<!-- HTML 입력 양식 태그 -->
+<!DOCTYPE html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+    <!-- 입력 양식 태그 -->
+        <!-- 폼 태그 -->
+        <form name="이름" action="sign.jsp" method="post">
+            <input type="text" name="name1" value="value1">
+        </form>
+        <!-- - `name` : form 이름
+             - `action` : 입력 데이터를 처리하는 웹 프로그램(JSP, PHP 등)
+             - `method` : 전송 방식
+             - `type` : 입력 양식 모양
+             - `method` 속성: 입력양식의 `method` 속성에는 입력한 데이터의 전송방식(GET/POST) 설정
+                 - GET 방식
+                     - URL의 뒷부분에 파라미터를 추가하여 데이터를 전달함
+                     - URL에 어떤 데이터가 전송되는지 표현되어 있으므로 보안에 취약 (검색 등에 사용)
+                     - 최대 글자 수: 2048
+                 - POST 방식
+                     - HTTP Request 헤더에 파라미터를 추가하여 데이터 전송
+                     - 어떤 데이터가 전송되는지 표면상에 보이지 않기 때문에 GET 방식보다 보안성이 높음 (로그인 등)
+                     - 글자 수 제한 없음 -->
+
+
+        <!-- 폼 관련 태그 -->
+        <!-- <input>	입력 제어
+             <textarea>	여러줄의 입력
+             <label>	<input> 요소의 라벨
+             <fieldset>	폼에 관련 요소
+             <legend>	<fieldset> 요소의 캡션
+             <select>	드롭다운 리스트
+             <optgroup>	드롭다운 목록에서 관련 옵션 그룹
+             <option>	드롭다운 목록에서 옵션
+             <button>	버튼
+             <datalist>	입력 제어에 대해 미리 정의된 옵션 리스트
+             <output>	계산 결과 -->
+
+
+        <!-- input 태그 -->
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" value="Sam" size="20">
+                
+
+        <!-- select 태그 -->
+        <select id="food" name="food">
+            <option value="pizza" selected>피자</option>
+            <option value="hamburger">햄버거</option>
+            <option value="pasta">파스타</option>
+        </select>
+
+        <!-- select 태그 (다중 선택) -->
+        <select id="food" name="food" multiple>  <!-- (window) shift, ctrl 사용 -->
+            <option value="pizza" selected>피자</option>
+            <option value="hamburger">햄버거</option>
+            <option value="pasta">파스타</option>
+        </select>
+        
+        <!-- select 태그 (다중 선택, 그룹) -->
+        <select id="food" name="food" multiple>
+            <optgroup label="음식">
+              <option value="pizza" selected>피자</option>
+              <option value="hamburger">햄버거</option>
+              <option value="pasta">파스타</option>
+            </optgroup>
+            <optgroup label="후식">
+              <option value="cola">콜라</option>
+              <option value="coffee"">커피</option>
+              <option value="icecream">아이스크림</option>
+            </optgroup>
+        </select>
+
+
+        <br><br>
+        <!-- textarea 태그 -->
+        <textarea name="article" rows="20" cols="30">
+            텍스트 
+        </textarea>
+
+
+        <!-- button 태그 -->
+        <button>Button</button>
+
+
+        <!-- fieldset, legend 태그 -->
+        <form>
+            <fieldset>
+              <legend>개인정보</legend>
+              <label for="name">이름:</label><br>
+              <input type="text" id="name" name="name" value="Sam"><br>
+              <label for="affiliation">소속:</label><br>
+              <input type="text" id="affiliation" name="affiliation" value="Sam's office"><br><br>
+              <input type="submit" value="전송">
+            </fieldset>
+        </form>
+
+
+        <!-- datalist 태그 -->
+        <form>
+            <input list="browsers">
+            <datalist id="browsers">
+              <option value="Chrome"></option>
+              <option value="Firefox"></option>
+              <option value="Internet Explorer"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+        </form>
+
+        <!-- output 태그 -->
+        <form oninput="r.value=parseInt(x.value)*parseInt(y.value)">
+            <input type="number" id="x" name="x" value="10">
+            *
+            <input type="number" id="y" name="y" value="20">
+            =
+            <output name="r" for="x y"></output>
+            <br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

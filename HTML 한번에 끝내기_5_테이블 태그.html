@@ -1,0 +1,91 @@
+<!-- HTML 한번에 끝내기 -->
+<!-- 이수안컴퓨터연구소 -->
+<!-- https://www.youtube.com/watch?v=VozMYcCYvtg&list=PL7ZVZgsnLwEHAehyS4ult4cgRpa7Ll_eU&index=2 -->
+<!-- https://suanlab.notion.site/HTML-256b041d35654311849f1c348e19219d -->
+
+
+<!-- HTML 테이블 태그 -->
+<!DOCTYPE html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+    <!-- 테이블 태그 -->
+        <table border="1">  <!-- border : 테두리 두께 -->
+            <caption>테이블 1</caption>
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+            </tr>
+            <tr>
+                <td>이수안</td>
+                <td>남자</td>
+            </tr>
+            <tr>
+                <td>이소은</td>
+                <td>여자</td>
+                <td>테스트</td>
+            </tr>
+        </table>
+        <!-- - `<table>` ~ `</table>`: 테이블 생성
+             - `<tr>` ~ `</tr>`: 테이블의 행(row) 생성
+             - `<th>` ~ `</th>`: 테이블의 헤드(head) 생성
+             - `<td>` ~ `</td>`: 테이블의 열(column) 생성
+             - `<caption>` ~ `</caption>`: 테이블의 캡션 설정
+             - `<rowspan>`: 셀을 세로로 병합, 병합하고 싶은 행의 수를 설정
+             - `<colspan>`: 셀을 가로로 병합, 병합하고 싶은 열의 수를 설 -->
+
+        <hr>
+        <!-- 시간표 만들기 -->
+        <table border="1">
+            <caption>시간표</caption>
+            <thead>
+                <tr>
+                    <th rowspan=2>교시</th>
+                    <th colspan=5>요일</th>
+                </tr>
+                <tr>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1교시</td>
+                    <td>컴퓨터개론</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2교시</td>
+                    <td></td>
+                    <td>머신러닝</td>
+                    <td></td>
+                    <td>웹과인터넷</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3교시</td>
+                    <td></td>
+                    <td></td>
+                    <td>프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4교시</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+          </table>
+    </body>
+</html>
